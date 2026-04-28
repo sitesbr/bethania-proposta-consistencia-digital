@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bethânia — Proposta de Continuidade 180 dias</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Paleta oficial da marca Bethânia */
+    --marsala:       #6B3E3E;
+    --marsala-dark:  #4A2828;
+    --marsala-deep:  #3A1E1E;
+    --linho:         #F5EDE4;
+    --linho-dark:    #EDE0D2;
+    --terracota:     #C4958B;
+    --terracota-mid: #B07A6E;
+    --charcoal:      #4A4238;
+    --charcoal-soft: #6B6258;
+    --marsala-tint:  #CEBCB6;
+    --terra-tint:    #E6D3C9;
+    --white:         #FDFAF7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1C1410;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 0;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .slide {
+    width: 390px;
+    height: 844px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+  }
+
+  /* ─── Monograma SVG inline ─── */
+  .mono { display: block; }
+
+  /* ══════════════════════════════
+     SLIDE 1 — CAPA
+  ══════════════════════════════ */
+  .s1 { background: var(--linho); }
+  .s1 .texture {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 110%, rgba(107,62,62,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 10%, rgba(196,149,139,0.07) 0%, transparent 60%);
+  }
+  .s1 .watermark {
+    position: absolute; right: -30px; top: 50%; transform: translateY(-50%);
+    opacity: 0.06;
+  }
+  .s1 .top-rule {
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--marsala-dark), var(--marsala), var(--terracota), var(--marsala));
+  }
+  .s1 .content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 70px 48px; text-align: center;
+  }
+  .s1 .logo-wrap { margin-bottom: 32px; }
+  .s1 .eyebrow {
+    font-size: 10px; letter-spacing: 3.5px; text-transform: uppercase;
+    color: var(--terracota); margin-bottom: 20px; font-weight: 400;
+  }
+  .s1 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.2; margin-bottom: 8px;
+  }
+  .s1 .title em { font-style: italic; color: var(--marsala); }
+  .s1 .rule {
+    width: 48px; height: 1px; background: var(--terracota); margin: 24px auto;
+  }
+  .s1 .subtitle {
+    font-size: 13px; font-weight: 300; color: var(--charcoal-soft);
+    line-height: 1.75; max-width: 270px;
+  }
+  .s1 .bottom-tag {
+    position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%);
+    border: 1px solid var(--marsala-tint); border-radius: 100px;
+    padding: 9px 28px; white-space: nowrap;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--marsala); font-weight: 400;
+  }
+  .s1 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 2 — O QUE CONSTRUÍMOS
+  ══════════════════════════════ */
+  .s2 { background: var(--marsala-dark); }
+  .s2 .bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(107,62,62,0.6) 0%, transparent 70%);
+  }
+  .s2 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s2 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+  .s2 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 400; color: var(--linho); line-height: 1.25; margin-bottom: 36px;
+  }
+  .s2 .title em { font-style: italic; color: var(--marsala-tint); }
+  .s2 .items { display: flex; flex-direction: column; gap: 22px; }
+  .s2 .item { display: flex; align-items: flex-start; gap: 16px; }
+  .s2 .check {
+    width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--terracota);
+    flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .s2 .check svg { width: 11px; height: 11px; }
+  .s2 .item-title { font-size: 13px; font-weight: 500; color: var(--linho); margin-bottom: 3px; }
+  .s2 .item-desc { font-size: 12px; font-weight: 300; color: rgba(245,237,228,0.6); line-height: 1.6; }
+  .s2 .footer {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.05); border-top: 1px solid rgba(196,149,139,0.2);
+    padding: 20px 44px;
+    font-size: 12px; font-weight: 300; color: var(--terra-tint); line-height: 1.6;
+  }
+  .s2 .footer strong { color: var(--linho); font-weight: 400; }
+  .s2 .slide-n { position: absolute; top: 24px; right: 28px; font-size: 9px; letter-spacing: 2px; color: rgba(196,149,139,0.4); }
+
+  /* ══════════════════════════════
+     SLIDE 3 — A NOVA BASE
+  ══════════════════════════════ */
+  .s3 { background: var(--linho); }
+  .s3 .top-rule { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--marsala); }
+  .s3 .content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 70px 48px; text-align: center;
+  }
+  .s3 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+  .s3 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.2; margin-bottom: 32px;
+  }
+  .s3 .title em { font-style: italic; color: var(--marsala); }
+  .s3 .quote-box {
+    background: var(--marsala-dark); border-radius: 16px;
+    padding: 32px 36px; margin-bottom: 28px; width: 100%;
+  }
+  .s3 .quote {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 17px; color: var(--linho); line-height: 1.7; font-weight: 400;
+  }
+  .s3 .quote-accent { width: 32px; height: 2px; background: var(--terracota); margin: 0 auto 16px; }
+  .s3 .body { font-size: 12px; font-weight: 300; color: var(--charcoal-soft); line-height: 1.75; }
+  .s3 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 4 — A INTERNET É MAIOR
+  ══════════════════════════════ */
+  .s4 { background: var(--terra-tint); }
+  .s4 .side-accent {
+    position: absolute; top: 0; left: 0; bottom: 0; width: 5px;
+    background: linear-gradient(to bottom, var(--marsala), var(--terracota));
+  }
+  .s4 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px 64px 52px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .s4 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--marsala); margin-bottom: 10px; }
+  .s4 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 31px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.25; margin-bottom: 22px;
+  }
+  .s4 .title em { font-style: italic; }
+  .s4 .body { font-size: 13px; font-weight: 300; color: var(--charcoal); line-height: 1.75; margin-bottom: 28px; }
+  .s4 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .s4 .tag {
+    background: rgba(107,62,62,0.08);
+    border: 1px solid rgba(107,62,62,0.2);
+    border-radius: 100px; padding: 7px 14px;
+    font-size: 11px; color: var(--marsala); font-weight: 400; letter-spacing: 0.3px;
+  }
+  .s4 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 5 — O RISCO
+  ══════════════════════════════ */
+  .s5 { background: var(--marsala-deep); }
+  .s5 .bg { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 70%, rgba(196,149,139,0.1) 0%, transparent 60%); }
+  .s5 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s5 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+  .s5 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 400; color: var(--linho); line-height: 1.2; margin-bottom: 32px;
+  }
+  .s5 .title em { font-style: italic; color: var(--marsala-tint); }
+  .s5 .risks { display: flex; flex-direction: column; gap: 18px; }
+  .s5 .risk { display: flex; align-items: flex-start; gap: 14px; }
+  .s5 .bullet { width: 5px; height: 5px; border-radius: 50%; background: var(--terracota); flex-shrink: 0; margin-top: 7px; }
+  .s5 .risk-text { font-size: 13px; font-weight: 300; color: rgba(245,237,228,0.75); line-height: 1.65; }
+  .s5 .risk-text strong { color: var(--terra-tint); font-weight: 400; }
+  .s5 .callout {
+    margin-top: 32px; padding: 20px 24px; border-left: 2px solid var(--terracota);
+    background: rgba(255,255,255,0.04); border-radius: 0 10px 10px 0;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 15px; color: var(--linho-dark); line-height: 1.65;
+  }
+  .s5 .slide-n { position: absolute; top: 24px; right: 28px; font-size: 9px; letter-spacing: 2px; color: rgba(196,149,139,0.35); }
+
+  /* ══════════════════════════════
+     SLIDE 6 — O QUE VAMOS FAZER
+  ══════════════════════════════ */
+  .s6 { background: var(--linho); }
+  .s6 .top-rule { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--marsala), var(--terracota)); }
+  .s6 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s6 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+  .s6 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.2; margin-bottom: 28px;
+  }
+  .s6 .title em { font-style: italic; }
+  .s6 .list { display: flex; flex-direction: column; gap: 0; }
+  .s6 .item {
+    display: flex; align-items: flex-start; gap: 18px;
+    padding: 18px 0; border-bottom: 1px solid rgba(107,62,62,0.12);
+  }
+  .s6 .item:last-child { border-bottom: none; }
+  .s6 .num {
+    font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400;
+    color: var(--marsala-tint); flex-shrink: 0; line-height: 1;
+  }
+  .s6 .item-title { font-size: 13px; font-weight: 500; color: var(--marsala-dark); margin-bottom: 3px; }
+  .s6 .item-desc { font-size: 12px; font-weight: 300; color: var(--charcoal-soft); line-height: 1.55; }
+  .s6 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 7 — 180 DIAS
+  ══════════════════════════════ */
+  .s7 { background: var(--marsala-dark); }
+  .s7 .bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 80%, rgba(74,40,40,0.5) 0%, transparent 60%); }
+  .s7 .content {
+    position: absolute; inset: 0;
+    padding: 52px 38px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s7 .eyebrow { font-size: 9px; letter-spacing: 2.6px; text-transform: uppercase; color: var(--terracota); margin-bottom: 8px; }
+  .s7 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px; font-weight: 400; color: var(--linho);
+    line-height: 1.15; margin-bottom: 22px;
+  }
+  .s7 .title em { font-style: italic; color: var(--marsala-tint); }
+  .s7 .months { display: flex; flex-direction: column; }
+  .s7 .month { display: flex; gap: 14px; padding: 10px 0; position: relative; }
+  .s7 .month:not(:last-child)::after {
+    content: ''; position: absolute; left: 14px; top: 35px; bottom: -3px;
+    width: 1px; background: rgba(196,149,139,0.2);
+  }
+  .s7 .circle {
+    width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--terracota);
+    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 14px; color: var(--marsala-tint);
+  }
+  .s7 .month-label {
+    font-size: 9.5px; font-weight: 500; color: var(--terracota);
+    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 3px; margin-top: 2px;
+  }
+  .s7 .month-text { font-size: 11px; font-weight: 300; color: rgba(245,237,228,0.72); line-height: 1.42; }
+  .s7 .slide-n { position: absolute; top: 24px; right: 28px; font-size: 9px; letter-spacing: 2px; color: rgba(196,149,139,0.35); }
+
+  /* ══════════════════════════════
+     SLIDE 8 — BENEFÍCIOS
+  ══════════════════════════════ */
+  .s8 { background: var(--linho-dark); }
+  .s8 .corner { position: absolute; top: 0; right: 0; width: 160px; height: 160px; background: radial-gradient(ellipse at top right, rgba(196,149,139,0.12), transparent 70%); }
+  .s8 .top-rule { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--marsala); }
+  .s8 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s8 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--marsala); margin-bottom: 10px; }
+  .s8 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.2; margin-bottom: 28px;
+  }
+  .s8 .title em { font-style: italic; }
+  .s8 .benefits { display: flex; flex-direction: column; gap: 18px; }
+  .s8 .benefit { display: flex; align-items: flex-start; gap: 14px; }
+  .s8 .line { width: 22px; height: 1px; background: var(--terracota); flex-shrink: 0; margin-top: 9px; }
+  .s8 .benefit-text { font-size: 13px; font-weight: 300; color: var(--charcoal); line-height: 1.65; }
+  .s8 .benefit-text strong { font-weight: 500; color: var(--marsala-dark); }
+  .s8 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 9 — INVESTIMENTO
+  ══════════════════════════════ */
+  .s9 { background: var(--marsala-dark); }
+  .s9 .bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(196,149,139,0.1) 0%, transparent 70%); }
+  .s9 .top-rule { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--terracota), var(--marsala-tint), var(--terracota)); }
+  .s9 .content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 60px 44px; text-align: center;
+  }
+  .s9 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 24px; }
+  .s9 .plan { font-family: 'Playfair Display', serif; font-size: 17px; font-style: italic; color: var(--marsala-tint); margin-bottom: 20px; }
+  .s9 .price-row { display: flex; align-items: flex-start; justify-content: center; gap: 4px; margin-bottom: 6px; }
+  .s9 .curr { font-size: 20px; color: var(--linho-dark); margin-top: 14px; font-weight: 300; }
+  .s9 .price { font-family: 'Playfair Display', serif; font-size: 88px; font-weight: 400; color: var(--linho); line-height: 1; }
+  .s9 .period { font-size: 12px; color: rgba(245,237,228,0.5); letter-spacing: 1.5px; margin-bottom: 32px; }
+  .s9 .rule { width: 40px; height: 1px; background: var(--terracota); margin: 0 auto 32px; }
+  .s9 .includes { display: flex; flex-direction: column; gap: 13px; text-align: left; width: 100%; }
+  .s9 .inc { display: flex; align-items: center; gap: 12px; }
+  .s9 .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--terracota); flex-shrink: 0; }
+  .s9 .inc-text { font-size: 12px; font-weight: 300; color: rgba(245,237,228,0.7); }
+  .s9 .slide-n { position: absolute; top: 24px; right: 28px; font-size: 9px; letter-spacing: 2px; color: rgba(196,149,139,0.35); }
+
+  /* ══════════════════════════════
+     SLIDE 10 — COMO COMEÇAR
+  ══════════════════════════════ */
+  .s10 { background: var(--linho); }
+  .s10 .top-rule { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--marsala); }
+  .s10 .content {
+    position: absolute; inset: 0;
+    padding: 64px 44px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .s10 .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; }
+  .s10 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 400; color: var(--marsala-dark);
+    line-height: 1.2; margin-bottom: 28px;
+  }
+  .s10 .title em { font-style: italic; }
+  .s10 .steps { display: flex; flex-direction: column; }
+  .s10 .step { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(107,62,62,0.12); }
+  .s10 .step:last-child { border-bottom: none; }
+  .s10 .step-n {
+    font-family: 'Playfair Display', serif; font-size: 28px;
+    color: var(--marsala-tint); flex-shrink: 0; line-height: 1;
+  }
+  .s10 .step-title { font-size: 13px; font-weight: 500; color: var(--marsala-dark); margin-bottom: 3px; }
+  .s10 .step-desc { font-size: 12px; font-weight: 300; color: var(--charcoal-soft); line-height: 1.55; }
+  .s10 .slide-n { position: absolute; bottom: 20px; right: 28px; font-size: 9px; letter-spacing: 2px; color: var(--marsala-tint); }
+
+  /* ══════════════════════════════
+     SLIDE 11 — ENCERRAMENTO
+  ══════════════════════════════ */
+  .s11 { background: var(--marsala-dark); }
+  .s11 .bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 100% 50% at 50% 100%, rgba(107,62,62,0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 30% at 80% 10%, rgba(196,149,139,0.08) 0%, transparent 60%);
+  }
+  .s11 .bottom-rule { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--marsala-deep), var(--marsala), var(--terracota), var(--marsala)); }
+  .s11 .content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 64px 48px; text-align: center;
+  }
+  .s11 .logo-wrap { margin-bottom: 32px; }
+  .s11 .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 400; color: var(--linho);
+    line-height: 1.2; margin-bottom: 20px;
+  }
+  .s11 .title em { font-style: italic; color: var(--marsala-tint); }
+  .s11 .rule { width: 40px; height: 1px; background: var(--terracota); margin: 0 auto 24px; }
+  .s11 .body {
+    font-size: 13px; font-weight: 300; color: rgba(245,237,228,0.65);
+    line-height: 1.75; max-width: 280px; margin-bottom: 36px;
+  }
+  .s11 .cta {
+    border: 1px solid rgba(196,149,139,0.5); border-radius: 100px;
+    padding: 14px 40px;
+    font-size: 11px; font-weight: 400; letter-spacing: 2px;
+    color: var(--terracota); text-transform: uppercase;
+  }
+  .s11 .sig {
+    position: absolute; bottom: 28px;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 12px; color: rgba(206,188,182,0.35);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ SLIDE 1 — CAPA ═══ -->
+<div class="slide s1">
+  <div class="texture"></div>
+  <div class="top-rule"></div>
+  <!-- Watermark monograma -->
+  <svg class="watermark" width="260" height="260" viewBox="0 0 120 120" fill="none">
+    <text x="60" y="100" font-family="Playfair Display, serif" font-size="130" text-anchor="middle" fill="#6B3E3E" opacity="1">B</text>
+  </svg>
+  <div class="content">
+    <div class="logo-wrap">
+      <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+        <text x="26" y="44" font-family="Playfair Display, serif" font-size="52" text-anchor="middle" fill="#6B3E3E" font-weight="700">B</text>
+      </svg>
+    </div>
+    <div class="eyebrow">Proposta de continuidade</div>
+    <div class="title">O próximo passo<br>da sua <em>presença</em><br>digital</div>
+    <div class="rule"></div>
+    <div class="subtitle">Como fazer o restante da internet confirmar a autoridade que você já construiu.</div>
+  </div>
+  <div class="bottom-tag">Plano de 180 dias</div>
+  <div class="slide-n">01</div>
+</div>
+
+<!-- ═══ SLIDE 2 — O QUE CONSTRUÍMOS ═══ -->
+<div class="slide s2">
+  <div class="bg"></div>
+  <div class="content">
+    <div class="eyebrow">A base que construímos</div>
+    <div class="title">Uma marca que já<br><em>existe</em> de verdade</div>
+    <div class="items">
+      <div class="item">
+        <div class="check">
+          <svg viewBox="0 0 11 11" fill="none"><polyline points="1.5,6 4,9 9.5,2" stroke="#C4958B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="item-title">Landing Page com SEO Local</div>
+          <div class="item-desc">Estruturada para fortalecer sua presença local nas buscas certas.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">
+          <svg viewBox="0 0 11 11" fill="none"><polyline points="1.5,6 4,9 9.5,2" stroke="#C4958B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="item-title">Perfil do Google otimizado</div>
+          <div class="item-desc">Presença local estruturada para gerar confiança nos resultados certos.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="check">
+          <svg viewBox="0 0 11 11" fill="none"><polyline points="1.5,6 4,9 9.5,2" stroke="#C4958B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="item-title">Identidade visual &amp; logotipo</div>
+          <div class="item-desc">Uma marca com personalidade própria, à altura da sua excelência profissional.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <strong>Esses ativos são a sua nova base.</strong> O próximo passo é fazer o restante da internet falar a mesma língua.
+  </div>
+  <div class="slide-n">02</div>
+</div>
+
+<!-- ═══ SLIDE 3 — A NOVA BASE ═══ -->
+<div class="slide s3">
+  <div class="top-rule"></div>
+  <div class="content">
+    <div class="eyebrow">O ponto de partida</div>
+    <div class="title">O site e o Google<br>são a sua <em>referência</em></div>
+    <div class="quote-box">
+      <div class="quote-accent"></div>
+      <div class="quote">"A identidade, o site e o Perfil do Google criaram a base. O próximo passo é fazer o restante da internet confirmar a mesma autoridade."</div>
+    </div>
+    <div class="body">Não se trata de corrigir algo que ficou incompleto. Trata-se de alinhar os outros pontos da internet com a base profissional que já foi construída.</div>
+  </div>
+  <div class="slide-n">03</div>
+</div>
+
+<!-- ═══ SLIDE 4 — A INTERNET É MAIOR ═══ -->
+<div class="slide s4">
+  <div class="side-accent"></div>
+  <div class="content">
+    <div class="eyebrow">O cenário real</div>
+    <div class="title">Seu nome aparece em<br>mais lugares do que<br>você <em>imagina</em></div>
+    <div class="body">Além do seu site e do Google, há dezenas de plataformas onde pacientes em potencial encontram o seu nome — e cada uma forma uma impressão sobre quem você é.</div>
+    <div class="tags">
+      <div class="tag">Doctoralia</div>
+      <div class="tag">Diretórios de psicólogos</div>
+      <div class="tag">Plataformas de saúde</div>
+      <div class="tag">Redes sociais</div>
+      <div class="tag">Resultados antigos</div>
+      <div class="tag">Mapas e agregadores</div>
+      <div class="tag">Perfis com nomes parecidos</div>
+      <div class="tag">Registros públicos</div>
+    </div>
+  </div>
+  <div class="slide-n">04</div>
+</div>
+
+<!-- ═══ SLIDE 5 — O RISCO ═══ -->
+<div class="slide s5">
+  <div class="bg"></div>
+  <div class="content">
+    <div class="eyebrow">O que acontece sem consistência</div>
+    <div class="title">Cada canal<br>desalinhado é uma<br><em>fricção silenciosa</em></div>
+    <div class="risks">
+      <div class="risk">
+        <div class="bullet"></div>
+        <div class="risk-text">Perfis com <strong>informações desatualizadas</strong> criam dúvida antes da primeira mensagem.</div>
+      </div>
+      <div class="risk">
+        <div class="bullet"></div>
+        <div class="risk-text"><strong>Fotos ou descrições antigas</strong> transmitem uma imagem que não representa mais quem você é.</div>
+      </div>
+      <div class="risk">
+        <div class="bullet"></div>
+        <div class="risk-text">A <strong>falta de padronização</strong> enfraquece a percepção de autoridade, mesmo para quem já visitou seu site.</div>
+      </div>
+      <div class="risk">
+        <div class="bullet"></div>
+        <div class="risk-text">Dados <strong>conflitantes em diretórios</strong> podem interferir no SEO local que construímos.</div>
+      </div>
+    </div>
+    <div class="callout">Uma marca forte é reconhecida com clareza em qualquer lugar onde aparece.</div>
+  </div>
+  <div class="slide-n">05</div>
+</div>
+
+<!-- ═══ SLIDE 6 — O QUE VAMOS FAZER ═══ -->
+<div class="slide s6">
+  <div class="top-rule"></div>
+  <div class="content">
+    <div class="eyebrow">O plano em prática</div>
+    <div class="title">O que <em>faremos</em><br>todo mês</div>
+    <div class="list">
+      <div class="item">
+        <div class="num">01</div>
+        <div>
+          <div class="item-title">Auditoria e mapeamento</div>
+          <div class="item-desc">Identificamos todos os lugares onde você aparece e avaliamos o que precisa de ajuste.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">02</div>
+        <div>
+          <div class="item-title">Padronização dos perfis</div>
+          <div class="item-desc">Aplicamos identidade visual, textos e informações corretas em plataformas e diretórios.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">03</div>
+        <div>
+          <div class="item-title">Monitoramento mensal</div>
+          <div class="item-desc">Acompanhamos novos perfis gerados automaticamente e mantemos a consistência da marca.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num">04</div>
+        <div>
+          <div class="item-title">Relatório de presença</div>
+          <div class="item-desc">Um resumo mensal mostrando o que foi feito e como sua presença evoluiu.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-n">06</div>
+</div>
+
+<!-- ═══ SLIDE 7 — 180 DIAS ═══ -->
+<div class="slide s7">
+  <div class="bg"></div>
+  <div class="content">
+    <div class="eyebrow">A evolução ao longo do tempo</div>
+    <div class="title">Roteiro de<br><em>180 dias</em></div>
+    <div class="months">
+      <div class="month">
+        <div class="circle">1</div>
+        <div>
+          <div class="month-label">Diagnóstico e prioridade</div>
+          <div class="month-text">Mapeamos onde seu nome aparece e definimos quais canais externos precisam de ajuste primeiro.</div>
+        </div>
+      </div>
+      <div class="month">
+        <div class="circle">2</div>
+        <div>
+          <div class="month-label">Padronização inicial</div>
+          <div class="month-text">Ajustamos nome, bio, foto, especialidades e informações públicas nos perfis mais importantes.</div>
+        </div>
+      </div>
+      <div class="month">
+        <div class="circle">3</div>
+        <div>
+          <div class="month-label">Diretórios estratégicos</div>
+          <div class="month-text">Organizamos a presença em plataformas de saúde e diretórios que ajudam na confirmação de autoridade.</div>
+        </div>
+      </div>
+      <div class="month">
+        <div class="circle">4</div>
+        <div>
+          <div class="month-label">Reforço de autoridade</div>
+          <div class="month-text">Refinamos descrições, serviços e mensagens para destacar avaliação pré-cirúrgica com clareza.</div>
+        </div>
+      </div>
+      <div class="month">
+        <div class="circle">5</div>
+        <div>
+          <div class="month-label">Monitoramento e ajustes</div>
+          <div class="month-text">Verificamos resultados, corrigimos inconsistências novas e mantemos a presença pública alinhada.</div>
+        </div>
+      </div>
+      <div class="month">
+        <div class="circle">6</div>
+        <div>
+          <div class="month-label">Consolidação</div>
+          <div class="month-text">Entregamos um panorama comparativo e deixamos a presença externa mais organizada e confiável.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-n">07</div>
+</div>
+
+<!-- ═══ SLIDE 8 — BENEFÍCIOS ═══ -->
+<div class="slide s8">
+  <div class="corner"></div>
+  <div class="top-rule"></div>
+  <div class="content">
+    <div class="eyebrow">O que você ganha com isso</div>
+    <div class="title"><em>Confiança</em> em<br>cada ponto<br>de contato</div>
+    <div class="benefits">
+      <div class="benefit">
+        <div class="line"></div>
+        <div class="benefit-text"><strong>Primeira impressão consistente.</strong> Quem pesquisa seu nome encontra a mesma Bethânia em qualquer plataforma.</div>
+      </div>
+      <div class="benefit">
+        <div class="line"></div>
+        <div class="benefit-text"><strong>SEO local fortalecido.</strong> Dados consistentes em múltiplos canais ajudam o Google e os pacientes a reconhecerem a mesma profissional.</div>
+      </div>
+      <div class="benefit">
+        <div class="line"></div>
+        <div class="benefit-text"><strong>Menos atrito para o paciente.</strong> Informações claras e atualizadas reduzem desistências antes do contato.</div>
+      </div>
+      <div class="benefit">
+        <div class="line"></div>
+        <div class="benefit-text"><strong>Você não precisa se preocupar.</strong> Cuidamos de tudo. Você foca no que sabe fazer com excelência.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-n">08</div>
+</div>
+
+<!-- ═══ SLIDE 9 — INVESTIMENTO ═══ -->
+<div class="slide s9">
+  <div class="bg"></div>
+  <div class="top-rule"></div>
+  <div class="content">
+    <div class="eyebrow">Investimento mensal</div>
+    <div class="plan">Plano de Consistência Digital Externa</div>
+    <div class="price-row">
+      <div class="curr">R$</div>
+      <div class="price">350</div>
+    </div>
+    <div class="period">por mês · ciclo inicial sugerido: 180 dias</div>
+    <div class="rule"></div>
+    <div class="includes">
+      <div class="inc"><div class="dot"></div><div class="inc-text">Auditoria e mapeamento da presença digital</div></div>
+      <div class="inc"><div class="dot"></div><div class="inc-text">Padronização em diretórios e plataformas de saúde</div></div>
+      <div class="inc"><div class="dot"></div><div class="inc-text">Padronização de nome, foto, bio e informações públicas</div></div>
+      <div class="inc"><div class="dot"></div><div class="inc-text">Monitoramento mensal e ajustes contínuos</div></div>
+      <div class="inc"><div class="dot"></div><div class="inc-text">Relatório mensal de presença digital</div></div>
+    </div>
+  </div>
+  <div class="slide-n">09</div>
+</div>
+
+<!-- ═══ SLIDE 10 — COMO COMEÇAR ═══ -->
+<div class="slide s10">
+  <div class="top-rule"></div>
+  <div class="content">
+    <div class="eyebrow">Próximos passos</div>
+    <div class="title">Simples de<br><em>começar</em></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div>
+          <div class="step-title">Você confirma o interesse</div>
+          <div class="step-desc">Uma mensagem já é suficiente para dar início ao processo.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div>
+          <div class="step-title">Fazemos o diagnóstico inicial</div>
+          <div class="step-desc">Mapeamos toda a sua presença atual e apresentamos um panorama completo.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div>
+          <div class="step-title">Começamos os ajustes</div>
+          <div class="step-desc">Já no primeiro mês, os perfis prioritários são atualizados com a nova identidade.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n">4</div>
+        <div>
+          <div class="step-title">Você acompanha a evolução</div>
+          <div class="step-desc">Relatório mensal mostrando o que foi feito e como sua presença evolui ao longo dos 180 dias.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-n">10</div>
+</div>
+
+<!-- ═══ SLIDE 11 — ENCERRAMENTO ═══ -->
+<div class="slide s11">
+  <div class="bg"></div>
+  <div class="bottom-rule"></div>
+  <div class="content">
+    <div class="logo-wrap">
+      <svg width="56" height="56" viewBox="0 0 52 52" fill="none">
+        <text x="26" y="44" font-family="Playfair Display, serif" font-size="52" text-anchor="middle" fill="#CEBCB6" font-weight="700">B</text>
+      </svg>
+    </div>
+    <div class="title">A marca que você<br>construiu merece<br><em>ecoar</em></div>
+    <div class="rule"></div>
+    <div class="body">O site e o Google já falam por você. Este plano garante que todo o resto da internet fale a mesma língua — com a mesma elegância e a mesma autoridade.</div>
+    <div class="cta">Vamos conversar?</div>
+  </div>
+  <div class="sig">Proposta elaborada com cuidado · 2026</div>
+</div>
+
+</body>
+</html>
